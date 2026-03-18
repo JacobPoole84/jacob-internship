@@ -2,6 +2,10 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import Skeleton from "../UI/Skeleton";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const TopSellers = () => {
   const [sellers, setSellers] = useState([]);
@@ -28,7 +32,7 @@ const TopSellers = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
               <h2>Top Sellers</h2>
               <div className="small-border bg-color-2"></div>
             </div>

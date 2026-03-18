@@ -7,6 +7,10 @@ import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper/modules";
 import Skeleton from "../UI/Skeleton";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const HotCollections = () => {
   const [collections, setCollections] = useState([]);
@@ -33,7 +37,7 @@ const HotCollections = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-up" data-aos-duration="1000">
               <h2>Hot Collections</h2>
               <div className="small-border bg-color-2"></div>
             </div>

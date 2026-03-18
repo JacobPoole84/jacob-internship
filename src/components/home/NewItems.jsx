@@ -7,6 +7,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Pagination, Navigation } from "swiper/modules";
+import AOS from "aos";
+import "aos/dist/aos.css";
+
+AOS.init();
 
 const NewItems = () => {
   const [newItems, setNewItems] = useState([]);
@@ -52,7 +56,7 @@ const NewItems = () => {
       <div className="container">
         <div className="row">
           <div className="col-lg-12">
-            <div className="text-center">
+            <div className="text-center" data-aos="fade-in" data-aos-duration="1000">
               <h2>New Items</h2>
               <div className="small-border bg-color-2"></div>
             </div>
